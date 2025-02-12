@@ -68,6 +68,7 @@ namespace Neo.Plugins
                     WriteLog($"Message {cmd} of total size {size}", now);
                 _messageSizeCount[cmd] = 0;
             }
+            logFileWriter.Flush();
         }
 
         protected override void OnSystemLoaded(NeoSystem system)
